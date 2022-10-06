@@ -21,8 +21,16 @@ function minhatabuada(){
         }
         document.write("<br>");
     }
-]
+}
 
-function cubo(){
-    for
+function mat(){et v
+let v = document.getElementById("valor").Value;
+let j = document.getElementById("juros").Value;
+let t = document.getElementById("mensais").Value;
+let r = 0;
+for(let i=1; i<=t; i=++){
+    r = v *(1+(j/100));
+    v = r;
+}
+document.write("resultado " + r );
 }
