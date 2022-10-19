@@ -1,5 +1,4 @@
 let tabuada = 2;
-
 function escreva(){
     document.write(tabuada+"x 1 =" +(tabuada*1)+"<br>");
     document.write(tabuada+"x 1 =" +(tabuada*2)+"<br>");
@@ -12,7 +11,6 @@ function escreva(){
     document.write(tabuada+"1="+(tabuada*9)+"<br>");
     document.write(tabuada+"x 1 =" +(tabuada*10)+"<br>");
 }
-
 function minhatabuada(){
     for(let i=1; i <=10; i++){
         document.write("tabuada do"+ i +"<br>");
@@ -22,7 +20,6 @@ function minhatabuada(){
         document.write("<br>");
     }
 }
-
 function mat(){et v
 let v = document.getElementById("valor").Value;
 let j = document.getElementById("juros").Value;
@@ -34,3 +31,10 @@ for(let i=1; i<=t; i=++){
 }
 document.write("resultado " + r );
 }
+ function media(){
+let n1=document.getElementById("v1").value;
+let n2=document.getElementById("v2").value;
+let v3=document.getElementById("v3").value;
+let r=(Nuber(n1)) + Number(n2) +Number(N3))/3;
+document.getElementById("resultado").innerHTML="Media:" + r;
+ }
