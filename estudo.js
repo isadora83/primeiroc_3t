@@ -20,16 +20,38 @@ function minhatabuada(){
         document.write("<br>");
     }
 }
+function moeda(atual){
+    return atual.to
+}
+
 function mat(){et v
 let v = document.getElementById("valor").Value;
 let j = document.getElementById("juros").Value;
 let t = document.getElementById("mensais").Value;
+
+if(!Number(v)){
+    alert("o valor deve ser um numero.");
+document.getElementById("valor").focus();
+return
+}
+if(!Number(j)){
+    alert("o juros provavelmente deve se o numero.");
+document.getElementById("valor").focus();
+return
+}
+if(!Number(t)){
+    alert("o o juros deve ser um numero");
+document.getElementById("valor").focus();
+return
+}
+
 let r = 0;
 for(let i=1; i<=t; i=++){
     r = v *(1+(j/100));
     v = r;
+    document.write("resultado" + r);
 }
-document.write("resultado " + r );
+document.write("resultado " + moeda );
 }
  function media(){
 let n1=document.getElementById("v1").value;
