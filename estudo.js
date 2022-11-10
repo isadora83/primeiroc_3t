@@ -1,66 +1,58 @@
-
-       let tabuada = 5;
-
-function escreva(){
-    document.write(tabuada + " x 1 = " + (tabuada*1) + "<br>");
-    document.write(tabuada + " x 2 = " + (tabuada*2) + "<br>");
-    document.write(tabuada + " x 3 = " + (tabuada*3) + "<br>");
-    document.write(tabuada + " x 4 = " + (tabuada*4) + "<br>");
-    document.write(tabuada + " x 5 = " + (tabuada*5) + "<br>");
-    document.write(tabuada + " x 6 = " + (tabuada*6) + "<br>");
-    document.write(tabuada + " x 7 = " + (tabuada*7) + "<br>");
-    document.write(tabuada + " x 8 = " + (tabuada*8) + "<br>");
-    document.write(tabuada + " x 9 = " + (tabuada*9) + "<br>");
-    document.write(tabuada + " x 10 = " + (tabuada*10) + "<br>");
+#calculadora {
+    background: rgb(85, 211, 137);
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgb(51, 14, 85);
+    position: absolute;
+    left: 40%;
+    top: 10%;
+}
+#calculadora input {
+    background:white;
+    color: rgb(105, 69, 14);
+    border-radius: 10px;
+    padding: 5px;
 }
 
-function minhaTabuada(){
-    for(let i = 10; i >= 1; i--){
-        document.write("Tabuada do " + i + "<br>");
-        for(let j = 1; j <= 10; j++){
-            document.write(i + " x " + j + " = " + (j*i) + "<br>");
-        }
-        document.write("<br>");       
-    }
+#calculadora input:focus{
+    background-color: antiquewhite;
+    color:black
+}
+#calculadora button {
+    background: rgb(100, 79, 79);
+    color: cyan;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+#calculadora button:hover{
+    background: darkmagenta;
+    color: rgb(100, 79, 79);
+    cursor: pointer;
+}
+#spTotal {
+    background: rgb(100, 79, 79);
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    font-family:  'Courier New', Courier, monospace ;
+}
+.spLista{
+    background: rgb(129, 109, 138);
+    border-radius: 10px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    color:white;
+    width: 100px;
+}
+.calcF {
+    display: none;
+}
+#calcFin:checked + #calculadora .calcF {
+    display: block;
+}
+#calcFin {
+    display: none;
 }
 
-function cubo(){
-    for(let i = 20; i >= 2; i--){
-        document.write("O cubo de "+i+" é "+i+" x "+i+" x "+i+" = "+(i*i*i)+"<br>");
-    }
-}
-
-function mat(){
-    let v = document.getElementById("valor").value;
-    let j = document.getElementById("juros").value;
-    let t = document.getElementById("messes").value;
-    let r = 0;
-    for(let i=1; i<=t; i++){
-        r = v * (1+(j/100));
-        v = r;
-        
-    }
-    document.write("Resultado " + r);
-    document.getElementById("TotalGeral").innerHTML = "total: "+(r);
-}
-function media(){
-    let n1 = document.getElementById("v1").value
-    let n2 = document.getElementById("v2").value
-    let n3 = document.getElementById("v3").value
-    let r = (Number(n1) + Number(n2) + Number(n3))/3;
-    document.getElementById("resultado").innerHTML = "Média : " + r;
-}
-function soma(){
-    let n1 = document.getElementById("v1").value
-    let n2 = document.getElementById("v2").value
-    let n3 = document.getElementById("v3").value
-    let r = (Number(n1) + Number(n2) + Number(n3));
-    document.getElementById("resultado").innerHTML = "Soma : " + r;
-}
-function subtração(){
-    let n1 = document.getElementById("v1").value
-    let n2 = document.getElementById("v2").value
-    let n3 = document.getElementById("v3").value
-    let r = (Number(n1) - Number(n2) - Number(n3));
-    document.getElementById("resultado").innerHTML = "Subtração : " + r;
- }
+       
